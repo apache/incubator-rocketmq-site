@@ -35,14 +35,14 @@ Now execute the following commands to unpack 4.9.0 source release and build the 
   > cd distribution/target/rocketmq-4.9.0/rocketmq-4.9.0
 ```
 # Linux 
- 
+
 ## Start Name Server
 
 ```shell
   > nohup sh bin/mqnamesrv &
   > tail -f ~/logs/rocketmqlogs/namesrv.log
   The Name Server boot success...
-```  
+```
 
 ## Start Broker
 
@@ -147,3 +147,71 @@ Open new powershell window, after set the correct environment variable. then cha
 ## Shutdown Servers
 
 Normally, you can just closed these powershell windows. (Do not do it at production environment)
+
+# Developing guide
+this guide is for build idea develop or debug environment. The guide is for the latest 4.9.1
+
+## clone the code
+
+first, you can fork the rocketmq repo and clone into local fs.
+
+```git clone git@github.com:your repo.git```
+
+the repo is a maven project, do build:
+```
+cd rocketmq
+mvn -Prelease-all -DskipTests clean install -U
+```
+
+you can see the target on the `distribution\target\rocketmq-4.9.1-SNAPSHOT\rocketmq-4.9.1-SNAPSHOT` , the command mention before is on the `bin/` , like `bin/tools.cmd`
+
+## Set Environment  Variables
+
+this different from the guide before for windows. The guide before you download the binary release , but now is the source code .  So the environment  variables are a bit different.
+
+````
+ROCKETMQ_HOME = D:\rocketmq\distribution\target\rocketmq-4.9.1-SNAPSHOT\rocketmq-4.9.1-SNAPSHOT
+NAMESRV_ADDR=localhost:9876
+````
+
+The variable `ROCKETMQ_HOME` is set to let the code find some setting under the `conf` directory , like `logback_namesrv.xml` for the nameserver startup.
+
+you can set it directly in your machine or set it on the IDEA run config. 
+
+1. From the idea, right click the Run .
+2. Choose Edit Configuration menu.
+3. Chose the java main class you run.
+4. fill the setting above into the Environment Variables tab. 
+
+## Start Name Server
+
+you can directly run the java class:`org.apache.rocketmq.namesrv.NamesrvStartup`,  it will print  like 
+
+`The Name Server boot success. serializeType=JSON`
+
+## Start Broker
+
+you can directly run the java class:`org.apache.rocketmq.broke.BrokerStartup`,  it will print  like 
+
+`The broker boot success. serializeType=JSON and name server is localhost:9876`
+
+## Send & Receive Messages
+
+for the producer , start the main method of class:`org.apache.rocketmq.example.quickstar.Producer` , you can set the nameserver address by
+
+`producer.setNamesrvAddr("localhost:9876");`
+
+for the consumer,  start the main method of class:`org.apache.rocketmq.example.quickstar.Consumer`
+
+you can see the message on the console.
+
+then you can add breakpoint、debug or anything you want.
+
+
+
+
+
+
+
+
+
