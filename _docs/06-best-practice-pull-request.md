@@ -9,7 +9,7 @@ This page guides you through Git setup and contribution process.
 {% include toc %}
 
 # Git setup for Contributors
-First of all, fork github’s `apache/rocketmq` to your own account on github and clone it as follows,
+First of all, fork github’s [apache/rocketmq](https://github.com/apache/rocketmq) to your own account on github and clone it as follows,
 
     git clone https://github.com/<your_github_name>/rocketmq.git
 
@@ -28,6 +28,7 @@ and update your local master via `git fetch` followed by `git rebase`, for insta
     
 # Do some work on the branch
 
+    git checkout -b ROCKETMQ-xxxx # create a branch 
     git commit -a -m "doing some work"
     git push origin ROCKETMQ-xxxx # notice pushing to **origin** not **apache**
     
@@ -42,7 +43,7 @@ Push your branch to Github:
     
 1. Go to your ROCKETMQ-xxxx branch on Github. Since you forked it from Github's apache/rocketmq. By default all PR will go to apache/master.
 
-2. Click the green "Compare, review, and create pull request" button. You can edit the to and from for the PR if it isn't correct. The "base fork" should be apache/rocketmq unless you are collaborating with one of the committers on the list. The "base" will be master. Don't submit a PR to any other branches unless permitted by branch owner. The "head fork" will be your forked repo and the "compare" will be your ROCKETMQ-xxxx branch.
+2. Click the green "Compare, review, and create pull request" button. You can edit the `to` and `from` for the PR if it isn't correct. The "base fork" should be apache/rocketmq unless you are collaborating with one of the committers on the list. The "base" will be master. Don't submit a PR to any other branches unless permitted by branch owner. The "head fork" will be your forked repo and the "compare" will be your ROCKETMQ-xxxx branch.
 3. Click the "Create pull request" button and name the request "ROCKETMQ-xxxx" all caps. This will connect the comments of the PR to the mailing list and issue comments.
 4. From now on the PR lives on github's apache/rocketmq. You can use the commenting UI there.
 5. If you are looking for a review or wanting to share with someone else please write a note in the comments and don't worry about automated merging of your PR -- you will have to do that later. The PR is tied to your branch so you can respond to comments, make fixes, and commit them from your local repo. They will appear on the PR page and be mirrored to Github issue and the mailing list.
@@ -52,7 +53,7 @@ Push your branch to Github:
 Before you create a pull request, make sure
 1. A corresponding [Github issue](https://github.com/apache/rocketmq/issues) is created and has a clear problem description.
 2. Make sure you follow [Coding Guidelines](/docs/code-guidelines/).
-3. You have unit tests for everything you are about to commit.
+3. You have unit tests for everything you are about to commit. All pull requests are automatically tested at [Travis CI](https://travis-ci.org/github/apache/rocketmq) on AMD64 and ARM64 CPU architectures.
 
 For information about creating pull requests, please check [GitHub PR docs](https://help.github.com/articles/creating-a-pull-request/).
 

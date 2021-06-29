@@ -29,8 +29,8 @@ We recommend to first reach consensus with the community on whether a new featur
 ## Help others and join the discussions
 Most communication in the Apache RocketMQ community happens on two mailing lists:
 
-* The user mailing lists users@rocketmq.apache.org is the place where users of Apache RocketMQ ask questions and seek for help or advice. Joining the user list and helping other users is a very good way to contribute to RocketMQ’s community. Furthermore, there is the [apache-rocketmq](https://stackoverflow.com/questions/tagged/rocketmq) tag on Stack Overflow if you’d like to help RocketMQ users (and harvest some points) there.
-* The development mailing list dev@rocketmq.apache.org is the place where RocketMQ developers exchange ideas and discuss new features, upcoming releases, and the development process in general. If you are interested in contributing code to RocketMQ, you should join this mailing list.
+* The [user mailing lists](mailto:users@rocketmq.apache.org) is the place where users of Apache RocketMQ ask questions and seek for help or advice. Joining the user list and helping other users is a very good way to contribute to RocketMQ’s community. Furthermore, there is the [rocketmq](https://stackoverflow.com/questions/tagged/rocketmq) tag on Stack Overflow if you’d like to help RocketMQ users (and harvest some points) there.
+* The [development mailing list](mailto:dev@rocketmq.apache.org) is the place where RocketMQ developers exchange ideas and discuss new features, upcoming releases, and the development process in general. If you are interested in contributing code to RocketMQ, you should join this mailing list.
 
 You are very welcome to subscribe to both [mailing lists](/about/contact/).
 
@@ -86,7 +86,7 @@ There are many more ways to contribute to the RocketMQ community. For example yo
 
 ## How to become a committer
 
-Committers are community members that have write access to the project’s repositories, i.e., they can modify the code, documentation, and website by themselves and also accept other contributions.
+Committers are community members that have write access to the project’s repositories, i.e. they can modify the code, documentation, and website by themselves and also accept other contributions.
 
 There is no strict protocol for becoming a committer. Candidates for new committers are typically people that are active contributors and community members.
 

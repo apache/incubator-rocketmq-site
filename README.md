@@ -13,7 +13,7 @@ This website is based on Jekyll and a Jekyll theme named Minimal Mistakes.
 ## Install & Run
 1. gem install jekyll bundler
 2. git clone this repo
-3. cd rocketmq-sites
+3. cd rocketmq-site
 4. bundle install
 5. bundle exec jekyll serve
 
@@ -26,12 +26,12 @@ This website is based on Jekyll and a Jekyll theme named Minimal Mistakes.
 ## Questions
 
 ### How to post articles to **Documentation**?
-New a .md file in rocketmq-sites/_docs/, Jekyll will finish the rest of the work.
+Create a .md file in rocketmq-sites/_docs/, Jekyll will finish the rest of the work.
 
 Please refer to **01-quick-start-guide.md** for more details.
 
 ### How to post articles to **Blog**?
-New a .md file in rocketmq-sites/_posts/, Jekyll will finish the rest of the work.
+Create a .md file in rocketmq-sites/_posts/, Jekyll will finish the rest of the work.
 
 Please refer to **2016-12-23-mastering-component-compatible-dependency.md** for more details.
 
